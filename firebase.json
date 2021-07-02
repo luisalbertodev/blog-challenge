@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/platzi-store",
+    "public": "dist/blog-challenge",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [{ "source": "**", "destination": "/index.html" }]
   }
