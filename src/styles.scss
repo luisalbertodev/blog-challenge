@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+
+.product__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 16px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.pt2 {
+  padding-top: 2em;
+}
+
+.pb2 {
+  padding-bottom: 2em;
+}
+
+// Responsive app
+
+.container {
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 1110px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
