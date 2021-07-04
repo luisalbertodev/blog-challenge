@@ -1,0 +1,27 @@
+@import "/src/app/sass/variables";
+
+.single__chip {
+  padding-left: 4px;
+  padding-right: 4px;
+
+  a {
+    padding: 4px;
+    border: 2px solid $border-primary;
+    border-radius: 4px;
+    text-decoration: none;
+    color: $color-primary;
+    transition: 0.15s ease-in;
+
+    &:hover {
+      color: $white;
+      background-color: $color-primary;
+      border: 2px solid $border-primary;
+    }
+  }
+
+  &.chip__active a {
+    color: $white;
+    background-color: $color-primary;
+    border: 2px solid $border-primary;
+  }
+}

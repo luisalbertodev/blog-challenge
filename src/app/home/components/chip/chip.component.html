@@ -1,0 +1,8 @@
+<div class="single__chip {{ btnClassActive }}" *ngIf="title">
+  <a
+    [routerLink]="['/inicio']"
+    [queryParams]="{ categoria: title }"
+    queryParamsHandling="merge"
+    >{{ title }}</a
+  >
+</div>
