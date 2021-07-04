@@ -1,0 +1,112 @@
+@import "/src/app/sass/variables";
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.card-list {
+  // width: 90%;
+  max-width: 400px;
+}
+
+.card {
+  background-color: $white;
+  box-shadow: 0 0 0 1px rgba($black, 0.05), 0 20px 50px 0 rgba($black, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 1.25rem;
+  position: relative;
+  transition: 0.15s ease-in;
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &:hover,
+  &:focus-within {
+    box-shadow: 0 0 0 2px $border-primary, 0 10px 60px 0 rgba($black, 0.1);
+    transform: translatey(-5px);
+  }
+}
+
+.card-image {
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0;
+}
+
+.card-header {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    font-weight: 600;
+    font-size: 1.375rem;
+    line-height: 1.25;
+    text-decoration: none;
+    color: inherit;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.card-body {
+  margin-top: 0.5rem;
+  p {
+    font-weight: 400;
+    font-size: 0.85rem;
+    line-height: 1.25;
+    color: $text-secondary;
+  }
+}
+
+.card-footer {
+  margin-top: 1.25rem;
+  border-top: 1px solid #ddd;
+  padding-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  color: #787878;
+  &:first-child:after {
+    display: block;
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: currentcolor;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }
+  svg {
+    flex-shrink: 0;
+    width: 1em;
+    height: 1em;
+    margin-right: 0.25em;
+  }
+}
