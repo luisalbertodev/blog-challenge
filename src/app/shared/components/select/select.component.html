@@ -1,0 +1,62 @@
+<div class="dropdown" #origin>
+  <button class="dropdown__button" (click)="open(dropdown, origin)">
+    <ng-container *ngIf="!isOpen; else searchTpl">
+      <img
+        src="https://www.countryflags.io/{{ label.code }}/flat/16.png"
+        class="pr1"
+        style="margin: 0px -6px -3px 0"
+        alt=""
+      />
+      {{ label.name }}
+    </ng-container>
+    <ng-template #searchTpl>
+      <input
+        class="dropdown__input"
+        [formControl]="searchControl"
+        placeholder="Buscar un país.."
+        (click)="$event.stopPropagation()"
+      />
+    </ng-template>
+  </button>
+</div>
+
+<ng-template #dropdown>
+  <div class="select-list">
+    <cdk-virtual-scroll-viewport
+      class="select-list__viewport"
+      itemSize="32"
+      [style.height.px]="visibleOptions * 32"
+    >
+      <div
+        *ngIf="!options.length"
+        style="font-size: 12px; padding: 8px; margin: 0px"
+      >
+        No hubo resultados...
+      </div>
+
+      <div
+        class="select-list__item"
+        *cdkVirtualFor="let option of options"
+        [class.active]="isActive(option)"
+        (click)="select(option)"
+      >
+        <ng-container
+          *ngTemplateOutlet="
+            optionTpl ? optionTpl : defaultOptionTpl;
+            context: { $implicit: option }
+          "
+        >
+        </ng-container>
+      </div>
+    </cdk-virtual-scroll-viewport>
+  </div>
+</ng-template>
+
+<ng-template #defaultOptionTpl let-option>
+  <img
+    src="https://www.countryflags.io/{{ option.code }}/flat/16.png"
+    class="pr1"
+    alt=""
+  />
+  {{ option.name }}
+</ng-template>

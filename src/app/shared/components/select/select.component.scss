@@ -1,0 +1,67 @@
+@import "/src/app/sass/variables";
+
+.select-list {
+  color: $black;
+  text-align: left;
+  list-style: none;
+  overflow-x: hidden;
+  z-index: 2;
+  background-color: $white;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+.select-list__item {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  padding: 0 7px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.select-list__item:hover {
+  background-color: whitesmoke;
+}
+.select-list__item.active {
+  background-color: $color-primary;
+  color: $white;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown__input {
+  border: none;
+  // width: 100%;
+  width: 166px;
+  font-size: 14px;
+  // padding: 10px 6px;
+  height: 35px;
+}
+.dropdown__input:focus {
+  outline: none;
+}
+
+.dropdown__button {
+  width: 180px;
+  border: 1px solid lightgray;
+  text-align: left;
+  font-size: 14px;
+  color: #212529;
+  cursor: pointer;
+  // padding: 10px 6px;
+  height: 35px;
+  background: white;
+}
+.dropdown__button:focus {
+  outline: none;
+}
+.select-list__viewport {
+  width: 180px;
+  max-height: 128px;
+}
+
+.dropdown__button .dropdown__input {
+}
+
+.dropdown__button__content {
+}
