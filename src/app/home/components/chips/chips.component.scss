@@ -1,0 +1,9 @@
+.wrapper__chips {
+  width: 100%;
+  overflow: scroll;
+  padding-top: 5em;
+
+  @media (min-width: 767px) {
+    padding-top: 2em;
+  }
+}
