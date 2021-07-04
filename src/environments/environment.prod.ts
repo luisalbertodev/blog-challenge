@@ -1,5 +1,8 @@
 export const environment = {
   production: true,
+  baseUrl:
+    'https://newsapi.org/v2/top-headlines?apiKey=abff5e69789847b1b7df3032378abfba&language=es',
+  apiKeyServiceNews: 'abff5e69789847b1b7df3032378abfba',
   firebase: {
     apiKey: 'AIzaSyCFi6Y92eXOFxaBFGGhDX-q5reOwoQAT1c',
     authDomain: 'blog-challenge-18f9b.firebaseapp.com',
