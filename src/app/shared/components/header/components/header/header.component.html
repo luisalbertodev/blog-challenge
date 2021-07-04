@@ -1,0 +1,18 @@
+<app-menu-desktop
+  [title]="title"
+  [selectedOption]="selectedOption"
+  [dataSource]="dataSource"
+  [updateOption]="updateOption"
+  [currentUser]="currentUser$ | async"
+  (onLogout)="logout()"
+>
+</app-menu-desktop>
+<app-menu-mobile
+  [title]="title"
+  [selectedOption]="selectedOption"
+  [dataSource]="dataSource"
+  [updateOption]="updateOption"
+  [currentUser]="currentUser$ | async"
+  (onLogout)="logout()"
+>
+</app-menu-mobile>

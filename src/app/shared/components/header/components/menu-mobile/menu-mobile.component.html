@@ -1,0 +1,68 @@
+<nav role="navigation" class="d_none__mobile">
+  <div class="container">
+    <div class="row between-xs middle-xs w-100 wrapper__navigation">
+      <div class="col-md-4">
+        <div class="row start-xs">
+          <a routerLink="/" routerLinkActive="active" class="logo">
+            <img src="assets/logo.png" alt="logo" class="img-fluid" />
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="row center-xs header__title">
+          <h2>{{ title }}</h2>
+        </div>
+      </div>
+      <div class="col-md-4" style="margin: 0 1em 0 0">
+        <div class="row end-xs" style="margin: 0px">
+          <div id="menuToggle">
+            <!--
+             A fake / hidden checkbox is used as click reciever,
+             so you can use the :checked selector on it.
+             -->
+            <input type="checkbox" id="btn-burger" />
+
+            <!--
+             Some spans to act as a hamburger.
+             -->
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <!--
+             Content menu
+             -->
+            <ul id="menu">
+              <li>
+                <div class="row center-xs">
+                  <div
+                    class="col-xs-12"
+                    style="display: flex; flex-direction: column"
+                  >
+                    <label for="pais">Lista de regiones</label>
+                    <app-select
+                      [defaultValue]="selectedOption"
+                      [options]="dataSource"
+                      (selectChange)="updateOption($event)"
+                    ></app-select>
+                  </div>
+                </div>
+              </li>
+              <li *ngIf="!currentUser">
+                <a routerLink="/seguridad/identificate" class="btn__primary"
+                  >Iniciar sesión
+                </a>
+              </li>
+              <li *ngIf="currentUser">
+                {{ currentUser }}
+              </li>
+              <li *ngIf="currentUser">
+                <a (click)="logout()"> Cerrar sesión </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

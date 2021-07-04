@@ -1,0 +1,39 @@
+<div class="wrapper__header d_none__desktop">
+  <header class="container">
+    <div class="row between-xs middle-xs w-100">
+      <div class="col-md-4">
+        <div class="row start-xs">
+          <a routerLink="/" routerLinkActive="active" class="logo">
+            <img src="assets/logo.png" alt="logo" class="img-fluid" />
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="row center-xs header__title">
+          <h2>{{ title }}</h2>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="row end-xs">
+          <app-select
+            [defaultValue]="selectedOption"
+            [options]="dataSource"
+            (selectChange)="updateOption($event)"
+          ></app-select>
+          <a
+            routerLink="/seguridad/identificate"
+            class="btn__primary"
+            style="margin-left: 1em"
+            *ngIf="!currentUser"
+            >Iniciar sesión
+          </a>
+          <app-avatar
+            *ngIf="currentUser"
+            [currentUser]="currentUser"
+            (onLogout)="logout()"
+          ></app-avatar>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
