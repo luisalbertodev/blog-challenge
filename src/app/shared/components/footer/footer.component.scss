@@ -1,0 +1,57 @@
+@import "/src/app/sass/variables";
+
+p,
+a {
+  font-size: 13px;
+  font-weight: 400;
+  color: $text-secondary;
+  text-decoration: none;
+  animation: linear 200ms;
+}
+
+.wrapper__footer {
+  background: $white;
+  margin-top: 1em;
+  padding: 1em 0;
+  height: 48px;
+}
+
+.footer__link:hover {
+  color: $color-primary;
+  text-decoration: underline;
+}
+
+.wrapper__footer {
+  background: $white;
+}
+
+.logo {
+  width: 132px;
+  height: auto;
+}
+
+.footer__social_network {
+  a {
+    width: 26px;
+    height: 26px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    filter: grayscale(0.8);
+    animation: linear 200ms;
+  }
+
+  a:last-child {
+    width: 20px;
+    height: 20px;
+  }
+
+  a:hover {
+    filter: grayscale(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .footer__social_network {
+    padding-bottom: 1em;
+  }
+}
