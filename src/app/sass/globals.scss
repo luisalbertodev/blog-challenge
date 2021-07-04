@@ -1,0 +1,116 @@
+@import "./variables";
+html,
+body {
+  height: 100%;
+  font-family: "Work Sans", sans-serif;
+  background: $bg-primary;
+  padding: 0;
+  margin: 0;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.caption__input {
+  font-size: 12px;
+  color: red;
+  display: flex;
+}
+
+.btn__primary {
+  color: $color-primary;
+  text-decoration: none;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+  border: 1px solid $color-primary;
+  padding: 8px;
+  font-size: 14px;
+  transition: 200ms ease-out;
+
+  &:hover,
+  &.solid {
+    color: $white;
+    background-color: $color-primary;
+    background-position: left;
+  }
+}
+
+.pv1 {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.pt2 {
+  padding-top: 2em;
+}
+
+.pb2 {
+  padding-bottom: 2em;
+}
+
+.pl2 {
+  padding-left: 1em;
+}
+.pl1 {
+  padding-left: 0.5em;
+}
+.pr1 {
+  padding-right: 0.5em;
+}
+
+.ph2 {
+  padding: 2em 0;
+}
+
+// Responsive app
+
+.container {
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 1110px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+
+.d_none__desktop {
+  display: none;
+}
+
+.d_none__mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .d_none__mobile {
+    display: block;
+  }
+}
+
+@media (min-width: 767px) {
+  .d_none__desktop {
+    display: block;
+  }
+}
