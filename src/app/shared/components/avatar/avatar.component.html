@@ -1,0 +1,35 @@
+<!--  ********************************************
+  * This code was obtained from the following link
+  * https://codepen.io/Stedesign/pen/DbAJh
+  ******************************************** -->
+
+<nav>
+  <ul>
+    <li class="drop">
+      <div class="user-avatar">
+        <img
+          src="https://picsum.photos/200/200"
+          alt="profile"
+          width="32px"
+          height="32px"
+        />
+      </div>
+      <div class="triangle"></div>
+      <div class="dropdownContain">
+        <div class="dropOut">
+          <ul>
+            <li>
+              <p>
+                <small>CORREO</small>
+                {{ currentUser }}
+              </p>
+            </li>
+            <li>
+              <a (click)="onClick()"> Cerrar sesión </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>
+  </ul>
+</nav>
