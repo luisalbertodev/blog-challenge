@@ -1,1 +1,57 @@
-<p>register works!</p>
+<section>
+  <div class="container">
+    <div class="user signupBx">
+      <div class="formBx">
+        <form [formGroup]="form" (ngSubmit)="register($event)">
+          <div class="row center-xs middle-xs w-100">
+            <div class="col-md-12">
+              <div class="row center-xs">
+                <img
+                  src="assets/logo.png"
+                  alt="logo"
+                  class="img-fluid"
+                  style="width: 160px"
+                />
+              </div>
+            </div>
+          </div>
+          <h2>Crea una cuenta</h2>
+          <input
+            type="email"
+            [email]="true"
+            formControlName="email"
+            placeholder="Ingresa el correo"
+          />
+          <caption
+            class="caption__input"
+            *ngIf="form.controls.email.errors?.email"
+          >
+            *Ingresa un correo valido
+          </caption>
+          <input
+            type="password"
+            formControlName="password"
+            placeholder="Ingresa la contraseña"
+          />
+          <caption
+            class="caption__input pb2"
+            *ngIf="form.controls.password.errors?.minlength"
+          >
+            *Ingresa minimo 5 carácteres
+          </caption>
+          <button type="submit" class="btn__primary solid">Ingresar</button>
+          <p class="signup">
+            ¿Ya tienes una cuenta ?
+            <a routerLink="/seguridad/identificate">Iniciar sesión.</a>
+          </p>
+        </form>
+      </div>
+      <div class="imgBx">
+        <img
+          src="https://images.unsplash.com/photo-1504465039710-0f49c0a47eb7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+</section>
